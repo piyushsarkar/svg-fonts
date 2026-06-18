@@ -1,0 +1,69 @@
+{
+  "name": "svg-fonts",
+  "version": "0.1.0",
+  "description": "Generate icon fonts (and glyphmaps) from a folder of SVGs, a single SVG file, or a git repository.",
+  "keywords": [
+    "cli",
+    "font",
+    "glyphmap",
+    "icon",
+    "icon-font",
+    "svg",
+    "ttf"
+  ],
+  "homepage": "https://github.com/piyushsarkar/svg-fonts#readme",
+  "bugs": {
+    "url": "https://github.com/piyushsarkar/svg-fonts/issues"
+  },
+  "license": "MIT",
+  "author": "Piyush Sarkar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piyushsarkar/svg-fonts.git"
+  },
+  "bin": {
+    "svg-fonts": "./dist/cli.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./cli": "./dist/cli.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp",
+    "prepublishOnly": "npm run build",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "citty": "^0.2.2",
+    "ora": "^9.4.0",
+    "oslllo-svg-fixer": "^6.0.1",
+    "simple-git": "^3.36.0",
+    "svgtofont": "^6.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "@typescript/native-preview": "7.0.0-dev.20260509.2",
+    "bumpp": "^11.1.0",
+    "oxfmt": "^0.55.0",
+    "oxlint": "^1.70.0",
+    "tsdown": "^0.22.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
