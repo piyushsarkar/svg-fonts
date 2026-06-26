@@ -1,6 +1,6 @@
 {
   "name": "svg-fonts",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Generate icon fonts (and glyphmaps) from a folder of SVGs, a single SVG file, or a git repository.",
   "keywords": [
     "cli",
